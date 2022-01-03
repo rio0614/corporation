@@ -300,6 +300,7 @@ body {
 @media only screen and (max-width: 767px) {
   .header-group {
     display: block;
+    padding: 16px 0 15px;
   }
 }
 
@@ -311,6 +312,8 @@ body {
 @media only screen and (max-width: 767px) {
   .header-left {
     margin: auto;
+    width: 147px;
+    height: 29px;
   }
 }
 
@@ -360,6 +363,77 @@ body {
   opacity: 1;
 }
 
+.drawer-icon {
+  position: fixed;
+  top: 20px;
+  right: 16px;
+  z-index: 40;
+  display: none;
+  -webkit-transition: -webkit-transform .4s ease 0s;
+  transition: -webkit-transform .4s ease 0s;
+  transition: transform .4s ease 0s;
+  transition: transform .4s ease 0s, -webkit-transform .4s ease 0s;
+}
+
+@media only screen and (max-width: 767px) {
+  .drawer-icon {
+    display: block;
+  }
+}
+
+.drawer-icon.active {
+  -webkit-transform: translateX(-200px);
+          transform: translateX(-200px);
+}
+
+.drawer-icon.active .drawer-icon-bar1 {
+  -webkit-transform: translateY(8px) rotate(-45deg);
+          transform: translateY(8px) rotate(-45deg);
+}
+
+.drawer-icon.active .drawer-icon-bar2 {
+  display: none;
+}
+
+.drawer-icon.active .drawer-icon-bar3 {
+  -webkit-transform: translateY(-8px) rotate(45deg);
+          transform: translateY(-8px) rotate(45deg);
+}
+
+.drawer-icon-bars {
+  width: 22px;
+  height: 20px;
+  display: block;
+  position: relative;
+}
+
+.drawer-icon-bar1,
+.drawer-icon-bar2,
+.drawer-icon-bar3 {
+  position: absolute;
+  width: 22px;
+  height: 4px;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  -webkit-transition: -webkit-transform .6s ease 0s;
+  transition: -webkit-transform .6s ease 0s;
+  transition: transform .6s ease 0s;
+  transition: transform .6s ease 0s, -webkit-transform .6s ease 0s;
+}
+
+.drawer-icon-bar1 {
+  top: 0;
+}
+
+.drawer-icon-bar2 {
+  top: 8px;
+}
+
+.drawer-icon-bar3 {
+  top: 16px;
+}
+
 .main-visual {
   padding: 184px 0;
   background-image: url(../img/mainvisual.png);
@@ -372,6 +446,7 @@ body {
 @media only screen and (max-width: 767px) {
   .main-visual {
     padding: 80px 0;
+    margin-top: 60px;
     text-align: center;
   }
 }

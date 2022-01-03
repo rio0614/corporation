@@ -88,6 +88,7 @@ body {
 
     @include mq('sp') {
         display: block;
+        padding: 16px 0 15px;
     }
 }
 
@@ -97,6 +98,8 @@ body {
 
     @include mq('sp') {
         margin: auto;
+        width: 147px;
+        height: 29px;
     }
 }
 
@@ -142,6 +145,67 @@ body {
     }
 }
 
+.drawer-icon {
+    position: fixed;
+    top: 20px;
+    right: 16px;
+    z-index: 40;
+    display: none;
+    transition: transform .4s ease 0s;
+
+    @include mq(sp) {
+        display: block;
+    }
+
+    &.active {
+        transform: translateX(-200px);
+
+        .drawer-icon-bar1 {
+            transform: translateY(8px) rotate(-45deg);
+        }
+        
+        .drawer-icon-bar2 {
+            display: none;
+        }
+        
+        .drawer-icon-bar3 {
+            transform: translateY(-8px) rotate(45deg);
+        }
+    }
+}
+
+.drawer-icon-bars {
+    width: 22px;
+    height: 20px;
+    display: block;
+    position: relative;
+}
+
+.drawer-icon-bar1,
+.drawer-icon-bar2,
+.drawer-icon-bar3 {
+    position: absolute;
+    width: 22px;
+    height: 4px;
+    background-color: $color-white;
+    top: 0;
+    left: 0;
+    transition: transform .6s ease 0s;
+}
+
+.drawer-icon-bar1 {
+    top: 0;
+}
+
+.drawer-icon-bar2 {
+    top: 8px;
+}
+
+.drawer-icon-bar3 {
+    top: 16px;
+}
+
+
 // =======================================
 // main-visualセクション
 // =======================================
@@ -155,6 +219,7 @@ body {
     
     @include mq('sp') {
         padding: 80px 0;
+        margin-top: 60px;
         text-align: center;
     }
 }
