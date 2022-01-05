@@ -1164,7 +1164,7 @@ body {
   position: relative;
 }
 
-.btn-submit input[type="submit"] {
+.btn-submit .submit {
   display: inline-block;
   color: #fff;
   border: none;
@@ -1174,19 +1174,20 @@ body {
   border-radius: 8px;
   background: #3F51B5 url(../img/button-arrow.png) no-repeat right 12px center/17px 16px;
   font-weight: bold;
-  padding: 17px 120px;
+  padding: 20px 120px;
   margin-bottom: 0;
+  cursor: pointer;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
 
 @media only screen and (max-width: 767px) {
-  .btn-submit input[type="submit"] {
+  .btn-submit .submit {
     padding: 20px 106px;
   }
 }
 
-.btn-submit input[type="submit"]:hover {
+.btn-submit .submit:hover {
   opacity: .6;
 }
 
